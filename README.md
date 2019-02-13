@@ -5,7 +5,7 @@ _Reference_: https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4
 
 # project description
 We will show easy example where intersection types are very handy:
-1. Suppose we have classes for third-party libraries (we can't modify them):
+1. Suppose we have classes from third-party libraries (we can't modify them):
     ```
     class Impl1 implements AutoCloseable, Runnable {
     
@@ -50,7 +50,7 @@ We will show easy example where intersection types are very handy:
         ```
         interface RunnableAndAutoCloseable extends AutoCloseable, Runnable { }
         ```
-    * and method:
+    * and the method:
         ```
         static void runAndClose2(RunnableAndAutoCloseable y) {
             try (y) {
@@ -60,7 +60,7 @@ We will show easy example where intersection types are very handy:
             }
         }
         ```
-    * **but note that we cannot modify Impl1 and Impl2 classes, so it is a road to nowhere**
+    * **but note that we cannot modify `Impl1` and `Impl2` classes, so it is a road to nowhere**
 1. We may use intersection type:
     ```
     static <I extends Runnable & AutoCloseable> void runAndClose(I y) {
@@ -70,4 +70,16 @@ We will show easy example where intersection types are very handy:
             // handle
         }
     }
+    ```
+    and tests:
+    ```
+    Runner.runAndClose(new Impl1());
+    Runner.runAndClose(new Impl2());
+    ```
+    will print:
+    ```
+    run1
+    closed1
+    run2
+    closed2
     ```
