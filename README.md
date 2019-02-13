@@ -1,7 +1,10 @@
 # java11-intersection-type
-_Reference_: https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4.9
 
 # preview
+Since Java 8 we have a new typ: **intersection type** that is an intersection (or subtype) of multiple types.
+
+For more specific info please take a look at: https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4.9
+(quite complex and obscure description).
 
 # project description
 We will show easy example where intersection types are very handy:
