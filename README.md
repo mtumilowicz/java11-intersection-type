@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/java11-intersection-type.svg?branch=master)](https://travis-ci.com/mtumilowicz/java11-intersection-type)
+
 # java11-intersection-type
 
 # preview
