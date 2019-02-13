@@ -88,3 +88,8 @@ We will show easy example where intersection types are very handy:
     run2
     closed2
     ```
+# serializing lambda
+Note that using type inference you can easily make lambda serializable:
+```
+var serializable = (Serializable & Supplier<String>)() -> "a";
+```
