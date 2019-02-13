@@ -3,8 +3,8 @@ import java.io.Serializable;
 /**
  * Created by mtumilowicz on 2019-02-13.
  */
-class Y {
-    static <I extends Runnable & AutoCloseable> void yyy(I y) {
+class Runner {
+    static <I extends Runnable & AutoCloseable> void runAndClose(I y) {
         try (y) {
             y.run();
         } catch (Exception e) {
@@ -12,7 +12,7 @@ class Y {
         }
     }
 
-    static void yyy2(RunnableAndAutoCloseable y) {
+    static void runAndClose2(RunnableAndAutoCloseable y) {
         try (y) {
             y.run();
         } catch (Exception e) {
@@ -21,8 +21,7 @@ class Y {
     }
 }
 
-interface RunnableAndAutoCloseable extends AutoCloseable, Runnable {
-}
+interface RunnableAndAutoCloseable extends AutoCloseable, Runnable { }
 
 class Impl1 implements AutoCloseable, Runnable {
 
