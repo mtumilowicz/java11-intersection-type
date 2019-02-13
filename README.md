@@ -1,7 +1,7 @@
 # java11-intersection-type
 
 # preview
-Since Java 8 we have a new typ: **intersection type** that is an intersection (or subtype) of multiple types.
+Since Java 8 we have a new type: **intersection type** that is an intersection (or subtype) of multiple types.
 
 For more specific info please take a look at: https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4.9
 (quite complex and obscure description).
